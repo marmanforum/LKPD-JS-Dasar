@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Penjumlahan</title>
+</head>
+<body>
+
+<h2>Hasil Penjumlahan</h2>
+<p id="hasil"></p>
+
+<script>
+    let total = 0;
+
+    for (let i = 1; i <= 10; i++) {
+        total += i;
+    }
+
+    document.getElementById("hasil").innerHTML =
+        "Jumlah dari 1 sampai 10 adalah: " + total;
+</script>
+
+</body>
+</html>
+  
+  <!--kapan lebih cocok menggunakan  for daripada while?Gunakan for ketika jumlah perulangan sudah jelas, dan gunakan while ketika perulangan
+    bergantung pada kondisi yang belum pasti.-->
+    <!--apa manfaat perulang dibanding nulis perintah berulang kali? Manfaat utama perulangan (looping) adalah untuk menghemat waktu dan tenaga,
+     meningkatkan efisiensi kode, meminimalkan kesalahan, dan membuat kode lebih mudah dikelola dan dibaca dibandingkan menulis perintah berulang kali 
+     secara manual. Perulangan memungkinkan Anda mengeksekusi blok kode yang sama berkali-kali dengan lebih sedikit baris kode, terutama saat memproses 
+     sejumlah besar data atau melakukan tugas yang berulang. -->
