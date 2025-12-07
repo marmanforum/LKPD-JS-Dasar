@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal Berita Terbaru</title>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    header {
+      background: blue;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .news-item {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 5px solid #0c325a;
+    }
+
+    .form-container {
+      margin-top: 30px;
+      background: #ffffff;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portal Berita Terbaru</h1>
+    <p>Selalu update dengan informasi terkini!</p>
+  </header>
+
+  <main>
+    <section id="news-list">
+      <h2>Daftar Berita</h2>
+      <!-- Berita akan ditambahkan di sini -->
+    </section>
+
+    <section class="form-container">
+      <h2>Tambahkan Berita Baru</h2>
+      <input type="text" id="title" placeholder="Judul Berita" required>
+      <textarea id="content" placeholder="Isi Berita" rows="5" required></textarea>
+      <button onclick="addNews()">Tambahkan</button>
+    </section>
+  </main>
+
+  <script>
+    const newsList = document.getElementById('news-list');
+
+    function addNews() {
+      const title = document.getElementById('title').value.trim();
+      const content = document.getElementById('content').value.trim();
+
+      if (title === '' || content === '') {
+        alert('Isi Judul Berita!');
+        return;
+      }
+
+      const newsItem = document.createElement('div');
+      newsItem.className = 'news-item';
+
+      const newsTitle = document.createElement('h3');
+      newsTitle.textContent = title;
+
+      const newsContent = document.createElement('p');
+      newsContent.textContent = content;
+
+      const timestamp = document.createElement('small');
+      const now = new Date();
+      timestamp.textContent = 'Diposting pada: ' + now.toLocaleString();
+
+      newsItem.appendChild(newsTitle);
+      newsItem.appendChild(newsContent);
+      newsItem.appendChild(timestamp);
+
+      newsList.appendChild(newsItem);
+
+      // Reset form
+      document.getElementById('title').value = '';
+      document.getElementById('content').value = '';
+    }
+  </script>
+
+</body>
+</html>

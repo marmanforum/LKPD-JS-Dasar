@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+</head>
+<body>
+    <div id="kotak"></div>
+<button onclick="tambahElemen()">Tambah Elemen</button>
+
+</body>
+<script>
+    function tambahElemen() {
+  let elemenBaru = document.createElement("p");
+  elemenBaru.textContent = "Elemen baru ditambahkan!";
+  document.getElementById("kotak").appendChild(elemenBaru);
+}
+</script>
+</html>

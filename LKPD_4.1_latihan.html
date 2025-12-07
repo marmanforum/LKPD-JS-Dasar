@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Luas Persegi</title>
+</head>
+<body>
+  <h1>
+    Menghitung luas persegi
+  </h1>
+  <!-- Refleksi-->
+  
+  <!--Mengapa fungsi membuat kode lebih efisien?
+
+Fungsi membuat kode lebih efisien karena:
+1. Tidak perlu menulis ulang kode yang sama (bisa dipakai ulang).
+2. Lebih rapi dan mudah dibaca.
+3. Mudah diperbaiki, cukup ubah di satu tempat.
+4. Lebih teratur saat program makin besar.
+-->
+  
+  <!-- Apa perbedaan antara parameter dan return?
+Parameter = nilai masuk ke fungsi (input).
+Return = nilai keluar dari fungsi (output).
+-->
+</body>
+<script>
+ function Luaspersegi(sisi){
+   return sisi*sisi;
+ }
+ let sisi= parseInt(prompt("Masukkan Luas Persegi"));
+let luas= Luaspersegi(sisi);
+alert("Jadi hasil luas persegi dengan sisi " + sisi + " , Adalah = " + luas);
+</script>
+</html>
